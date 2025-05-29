@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>هدية عيد ميلاد</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background:#AED9E0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+	  background-image: url(https://i.pinimg.com/originals/61/77/15/61771528347afd26037a1b321bf22bb7.gif);
+      background-size: cover;
+      background-position:center	  
+    }
+     
+    .card {
+      background-color: white;
+	  color:black;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+	  transition: 0.3s;
+    }
+	.card:hover{
+	 transform: scale(1.02);
+	  transition: 0.3s;
+	  background-image: url("https://i.pinimg.com/736x/c1/d2/87/c1d28776b654d0728ec4cb2f44c782ed.jpg"); 
+      background-size: cover;
+      background-position: center
+	  
+	 }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      background-color: #E0BFF2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+	  transition: 0.3s;
+    }
+
+    button:hover {
+     background-color: #AED9E0;
+	 transition: 0.3s;
+    }
+   
+  
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none; /* مخفية في البداية */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+	  transition: 0.3s;
+    }
+
+    .popup-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+    }
+	.card, .popup-content {
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+	 box-sizing: border-box;
+    }
+	.popup-content pre {
+     white-space: pre-wrap;
+     word-wrap: break-word;
+    }
+
+
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+   
+  <div class="card">
+    <h1>Happy birthday🎉</h1>
+    <p> ♡♡ ان شاء الله سنه كلها سعاده ♡♡</p>
+    <button onclick="openPopup()">اضغط هنا 🥳</button>
+	
+  </div>
+
+  <!-- النافذة المنبثقة -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <h2>💌 رسالة خاصة</h2>
+<pre>
+Most Esteemed Friend,
+
+I beg your pardon for the tardiness of this humble note,  
+for the day of your birth hath passed, and I, alas, am but late in my felicitations.
+
+Nonetheless, my wishes are no less sincere, nor my regard diminished.
+
+May the year ahead unfold with grace, joy, and quiet triumphs,  
+and may each day be touched with gladness and good health.
+
+Your presence in this world is a most welcome one,  
+and it is my honor to send you these belated, yet heartfelt, congratulations.
+
+With all due respect and friendly affection,  
+[Wasan]
+</pre>
+
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
